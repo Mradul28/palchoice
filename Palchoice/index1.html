@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: white;
+            
+        
+        }
+        nav {
+            font-size: 25px;
+            background-color:#8BC6EC; ;
+            color: black;
+            padding: 2px;
+            text-align: center;
+        
+        }
+    
+        .container {
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+
+           
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 0 10px;
+            background-color: #8BC6EC;
+            background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+            border: 2px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #333;
+            border-radius: 20px;
+            box-shadow: 1px 1px 10px;
+        }
+        .box button{
+            font-size: 15px;
+            padding: 15px;
+            border-radius: 6px;
+           
+            
+        }
+        #box2{
+            width: 15%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+       <h1>Welcome to PalChoice</h1><sub style="color: black;">-We respect your decision</sub>
+    </nav>
+
+    <div class="container">
+        <div class="box" id="box1">
+
+           <button type="button" onclick="createpoll()">Create Poll</button> 
+        </div>
+        <div class="box" id="box2"> <button type="button" onclick="previouspoll()">Want to Vote for poll</button> </div>
+    </div>
+    <script>
+        function createpoll()
+        {
+            window.location.href = 'index4.html';
+        }
+        function previouspoll()
+        {
+             window.location.href = 'index2.html';
+        }
+    </script>
+</body>
+</html>
