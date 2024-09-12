@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAARVBMVEUAAAD////w8PAODg76+voXFxcaGhqdnZ319fW4uLiXl5diYmItLS0ICAjk5OQ/Pz/d3d1ra2u+vr6BgYFbW1tzc3Pq6uozA3roAAACtUlEQVR4nO3d7W6qQBRG4Rm0fAso6v1f6lHbpuJmmjSH7Z6ZrOdff5C8K0YkhorzQtG0XV8eXFoOZd+1TSFz3MvfQzVab/0vYzX8WjgdrRdu4DgFC+uL9biNXOr1wpP1sA2d1gpn61WbmmXh2XrTxs6vhWmfQdeMy8LcXsG783NhXu/Bb/NPYU5n0Wen78Laeoma+qswlw966fJZOFnvUDQ9CnO4Fg053gsH6xWqhlthZT1CVXUrzO9q5tnoXWG9QVnhGusJyhrXWk9Q1rrOeoKyzvXWE5T1rrSeoKx0qX0v+le59wEAAAAAAAAA3mp33a+77qynbWS3cm/yQ0FhKihMH4XpozB9FKaPwvRRmD4K00dh+ihMH4XpozB9FKaPwvRRmD4K00dh+iiMThXQhvYmVxiY6+vQP2smV7gP7f0IHEBhdCgUKIwOhQKF0aFQoDA6FAoURodCgcLoUChQGB0KBQqjQ6FAYXQoFCiMDoUChdGhUKAwOu8oLEOUmpbeUPgxFeuuWlEL7ygMHbHXilqgUKBQolAZhQKFEoXKKBQolChURqFAoUShMgoFCiUKlVEoUChRqIxCgUKJQmUUChRKFCqjUKBQolAZhQKFEoXKKBQolChURqFAoWRcWIeeohb8ra8/P3etDB1Ra0UBAAAAAAAAADJwsB6g7ODe81sadkrXW09Q1rvOeoKyzrXWE5S1rrGeoKxxhfUEZYXzo/UGVaN3vrIeoaq6FQ7WI1QNt0J/tF6h6OjvhZP1DEXTo9BfrHeoufjPwnxv4ai/Cv3JeomSk/8u9LP1FhWz/yn0Z+s1Cs7+uTDDK5vRLwuzexXP/rUws/fi7GVhVmfUk18r9HUuH/2X2q8X3i7gcrhGPU6Lptdn3w5V2mfVsRpeilae7ls0bdeXqX2Peij7rm1W7p7+B9BYLlRDfy+FAAAAAElFTkSuQmCC"
+        type="image/x-icon">
+    <title>palChoice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: white ;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background-color: #8BC6EC;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+            
+            width: 400px;
+            height: 515px;
+            border-radius: 20px;
+            box-shadow: 1px 1px 30px;
+        }
+
+        img {
+            margin: 25px;
+            padding: 25px;
+        }
+
+        #formgroup label {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #formgroup input {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 5px;
+
+        }
+
+        .box h1 {
+            margin-bottom: 8px;
+            color: #090909;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+
+        #formgroup button {
+            width: 90%;
+            padding: 9px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+            background-color: black;
+            color: white;
+        }
+
+        #formgroup button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img id="img1"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlWUc1PQ2mPuAJunYn3LLjcirNHiA6kXUbYQ&s"
+                alt="">
+            <h1>PalChoice</h1>
+            <div class="formbox">
+                <form id="formgroup">
+                    <label for="username">Username</label>
+                    <br>
+                    <input type="text" id="username" placeholder="gdsc@mail.jiit.ac.in">
+                    <label for="pass">Password</label>
+                    <br>
+                    <input type="password" id="pass" placeholder="Enter the password">
+                    <button type="button" onclick="login()">Login</button>
+                </form>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const pass = document.getElementById('pass').value;
+            let valid = true;
+            if (username == '') {
+                valid = false;
+            }
+            if (pass == '') {
+                valid = false;
+
+
+            }
+            if (valid) {
+                alert("Form Submitted successfully");
+                window.location.href = 'index1.html';
+
+            }
+            else {
+                alert("username and password cant be empty");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
